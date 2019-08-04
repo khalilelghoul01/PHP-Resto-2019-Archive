@@ -1,0 +1,15 @@
+.bg-image {
+  width: 100vw; 
+  position: relative;
+  text-align: center;
+  color: white;
+
+}
+
+.centered {
+  position: absolute;
+  bottom: 10%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+} 
+
