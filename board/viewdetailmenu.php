@@ -29,7 +29,25 @@
         $date = $row['food_date'];
         $img = $row['food_img'];
         $prix = $row['food_price'];
-        echo "
+        if($cat=="1"){
+            $cat="Entrées";
+        }
+        if($img =="http://localhost/website/board/uploads/"){
+            echo "
+        <tr>
+        <th scope='row'>$menu</th>
+        <td>Il y'a pas d'image</td>
+        <td>$titre</td>
+        <td>$discription</td>
+        <th>$cat</th>
+        <td>$prix</td>
+        <td>$date</td>
+        <td><a href='editmenu.php?id=$id' type='button' class='btn btn-primary'>modifier</a></td>
+        <td><a href='deletemenu.php?id=$id' type='button' class='btn btn-danger'>supprimer</a></td>
+        </tr>
+        ";
+        }else{
+            echo "
         <tr>
         <th scope='row'>$menu</th>
         <td><img style='width:60px;height:60px;border-radius:50%;' src='$img'/></td>
@@ -41,7 +59,7 @@
         <td><a href='editmenu.php?id=$id' type='button' class='btn btn-primary'>modifier</a></td>
         <td><a href='deletemenu.php?id=$id' type='button' class='btn btn-danger'>supprimer</a></td>
         </tr>
-        ";}
+        ";}}
 
 
 

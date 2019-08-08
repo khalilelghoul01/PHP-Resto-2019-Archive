@@ -1,299 +1,244 @@
+<style>
+	#text-col{
+		color: #e75b1e;
+		border-bottom: 2px solid #e75b1e;
+	}
+	.header h1 {
+	background: #ce2c38;
+	border-radius: 100%;
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25);
+	height: 140px;
+	margin: 60px auto 0;
+	position: relative;
+	text-align: center;
+	width: 140px;
+	z-index: 10;
+	}
 
+	.header h1 span {
+	color: #fff;
+	display: block;
+	font-size: 40px;
+	padding: 34px 0 0 0;
+	}
+
+	.header h1 span+span {
+	color: #000;
+	display: block;
+	font-size: 28px;
+	padding: 0;
+	}
+
+	.main .container {
+	background: #fff;
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+	margin: -70px auto 80px;
+	padding: 80px;
+	z-index: 0;
+	}
+
+	h1 {
+	color: #444;
+	font-family: 'Oswald', sans-serif;
+	font-size: 40px;
+	margin: 20px 0 0 0;
+	text-align: center;
+	text-transform: uppercase;
+	}
+
+	#text{
+	border-bottom: 1px solid #444;
+	color: #000;
+	font-family: 'Oswald', sans-serif;
+	margin: 20px 0 10px;
+	padding: 0 0 10px 0;
+	text-transform: uppercase;
+	}
+
+	h3 {
+	color: #ce2c38;
+	font-family: 'Oswald', sans-serif;
+	margin: 10px 0 5px;
+	text-transform: uppercase;
+	}
+
+	.price p {
+	font-family: 'Oswald', sans-serif;
+	font-size: 20px;
+	font-style: normal;
+	margin: 26px 0 5px;
+	text-align: right;
+	}
+</style>
+
+  
+  
+
+
+
+<br><br><br><br>
 <?php
-echo "<div class='special-menu pad-top-100 parallax'>
-        <div class='container'>
-            <div class='row'>
-                <div class='col-lg-12 col-md-12 col-sm-12 col-xs-12'>
-                    <div class='wow fadeIn' data-wow-duration='1s' data-wow-delay='0.1s'>
-                        <h2 class='block-title color-white text-center'> Le plat du jour </h2>
-                        <h5 class='title-caption text-center'> Vous avez plusieurs choix, entre les pizzas, les salades, les plats et les pates.  </h5>
-                    </div>
-                    <div class='special-box'>
-                        <div id='owl-demo'>
-                            <div class='item item-type-zoom'>
-                                <a href='#' class='item-hover'>
-                                    <div class='item-info'>
-                                        <div class='headline'>
-                                            SALMON STEAK
-                                            <div class='line'></div>
-                                            <div class='dit-line'>Lorem ipsum dolor sit amet, consectetur adip aliqua. Ut enim ad minim venia.</div>
-                                        </div>
-                                    </div>
-                                </a>
-                                <div class='item-img'>
-                                    <img src='images/special-menu-1.jpg' alt='sp-menu'>
-                                </div>
-                            </div>
-                            <div class='item item-type-zoom'>
-                                <a href='#' class='item-hover'>
-                                    <div class='item-info'>
-                                        <div class='headline'>
-                                            ITALIAN PIZZA
-                                            <div class='line'></div>
-                                            <div class='dit-line'>Lorem ipsum dolor sit amet, consectetur adip aliqua. Ut enim ad minim venia.</div>
-                                        </div>
-                                    </div>
-                                </a>
-                                <div class='item-img'>
-                                    <img src='images/special-menu-2.jpg' alt='sp-menu'>
-                                </div>
-                            </div>
-                            <div class='item item-type-zoom'>
-                                <a href='#' class='item-hover'>
-                                    <div class='item-info'>
-                                        <div class='headline'>
-                                            VEG. ROLL
-                                            <div class='line'></div>
-                                            <div class='dit-line'>Lorem ipsum dolor sit amet, consectetur adip aliqua. Ut enim ad minim venia.</div>
-                                        </div>
-                                    </div>
-                                </a>
-                                <div class='item-img'>
-                                    <img src='images/special-menu-3.jpg' alt='sp-menu'>
-                                </div>
-                            </div>
-                            <div class='item item-type-zoom'>
-                                <a href='#' class='item-hover'>
-                                    <div class='item-info'>
-                                        <div class='headline'>
-                                            SALMON STEAK
-                                            <div class='line'></div>
-                                            <div class='dit-line'>Lorem ipsum dolor sit amet, consectetur adip aliqua. Ut enim ad minim venia.</div>
-                                        </div>
-                                    </div>
-                                </a>
-                                <div class='item-img'>
-                                    <img src='images/special-menu-1.jpg' alt='sp-menu'>
-                                </div>
-                            </div>
-                            <div class='item item-type-zoom'>
-                                <a href='#' class='item-hover'>
-                                    <div class='item-info'>
-                                        <div class='headline'>
-                                            VEG. ROLL
-                                            <div class='line'></div>
-                                            <div class='dit-line'>Lorem ipsum dolor sit amet, consectetur adip aliqua. Ut enim ad minim venia.</div>
-                                        </div>
-                                    </div>
-                                </a>
-                                <div class='item-img'>
-                                    <img src='images/special-menu-2.jpg' alt='sp-menu'>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- end special-box -->
-                </div>
-                <!-- end col -->
-            </div>
-            <!-- end row -->
-        </div>
-        <!-- end container -->
-    </div>
-    <!-- end special-menu -->
+include("includes/connection.php");
+echo"<div class='main' ng-controller='MainController'>
+<div class='container'>
+  <h1>MENU</h1>
+  <h2 id='text'>ENTREEs</h2>
+	  ";
+$get_menu ="SELECT * FROM menu WHERE cat='1' ORDER BY 1";
+$run_menu = mysqli_query($con, $get_menu);
+$menu=0;
+while($row = mysqli_fetch_array($run_menu)){
+	$menu++;
+	$title = $row['food_title'];
+	$discription = $row['food_description'];
+	$cat = $row['cat'];
+	$img = $row['food_img'];
+	$prix = $row['food_price'];
+	echo" <div class='appetizers row' ng-repeat='appetizer in appetizers'>
+	<div class='item col-md-9'>
+	  <h3 class='name'>$title</h3>
+	  <p class='description'>$discription</p>
+	</div>
+	<div class='price col-md-3'>
+	  <p class='price'>$prix</p>
+	</div>
+  </div>";}
 
-    <div id='menu' class='menu-main pad-top-100 pad-bottom-100'>
-        <div class='container'>
-            <div class='row'>
-                <div class='col-lg-12 col-md-12 col-sm-12 col-xs-12'>
-                    <div class='wow fadeIn' data-wow-duration='1s' data-wow-delay='0.1s'>
-                        <h2 class='block-title text-center'>
-						Notre Menu	
-					</h2>
-        <br><br>
-                    </div>
-                    <div class='tab-menu'>
-                        <div class='slider slider-nav'>
-                            <div class='tab-title-menu'>
-                                <h2>ENTRÉES</h2>
-                                <p> <i class='flaticon-canape'></i> </p>
-                            </div>
-                            <div class='tab-title-menu'>
-                                <h2>PLATS PRINCIPAUX</h2>
-                                <p> <i class='flaticon-dinner'></i> </p>
-                            </div>
-                            <div class='tab-title-menu'>
-                                <h2>DESERTS</h2>
-                                <p> <i class='flaticon-desert'></i> </p>
-                            </div>
-                            <div class='tab-title-menu'>
-                                <h2>BOISSONS</h2>
-                                <p> <i class='flaticon-coffee'></i> </p>
-                            </div>
-                        </div>
-                        <div class='slider slider-single'>
-                            <div>
-                                <div class='col-lg-6 col-md-6 col-sm-12 col-xs-12 '>
-                                    <div class='offer-item'>
-                                        <img src='images/menu-item-thumbnail-01.jpg' alt='' class='img-responsive'>
-                                        <div>
-                                            <h3>GARLIC BREAD</h3>
-                                            <p>
-                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc mollis eleifend dapibus.
-                                            </p>
-                                        </div>
-                                        <span class='offer-price'>$8.5</span>
-                                    </div>
-                                </div>
-                                <!-- end col -->
-                                <div class='col-lg-6 col-md-6 col-sm-12 col-xs-12 '>
-                                    <div class='offer-item'>
-                                        <img src='images/menu-item-thumbnail-02.jpg' alt='' class='img-responsive'>
-                                        <div>
-                                            <h3>MIXED SALAD</h3>
-                                            <p>
-                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc mollis eleifend dapibus.
-                                            </p>
-                                        </div>
-                                        <span class='offer-price'>$25</span>
-                                    </div>
-                                </div>
-                                <!-- end col -->
-                                <div class='col-lg-6 col-md-6 col-sm-12 col-xs-12 '>
-                                    <div class='offer-item'>
-                                        <img src='images/menu-item-thumbnail-03.jpg' alt='' class='img-responsive'>
-                                        <div>
-                                            <h3>BBQ CHICKEN WINGS</h3>
-                                            <p>
-                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc mollis eleifend dapibus.
-                                            </p>
-                                        </div>
-                                        <span class='offer-price'>$10</span>
-                                    </div>
-                                </div>
-                                <!-- end col -->
-                            </div>
-                            <div>
-                                <div class='col-lg-6 col-md-6 col-sm-12 col-xs-12 '>
-                                    <div class='offer-item'>
-                                        <img src='images/menu-item-thumbnail-04.jpg' alt='' class='img-responsive'>
-                                        <div>
-                                            <h3>MEAT FEAST PIZZA</h3>
-                                            <p>
-                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc mollis eleifend dapibus.
-                                            </p>
-                                        </div>
-                                        <span class='offer-price'>$5</span>
-                                    </div>
-                                </div>
-                                <!-- end col -->
-                                <div class='col-lg-6 col-md-6 col-sm-12 col-xs-12 '>
-                                    <div class='offer-item'>
-                                        <img src='images/menu-item-thumbnail-05.jpg' alt='' class='img-responsive'>
-                                        <div>
-                                            <h3>CHICKEN TIKKA MASALA</h3>
-                                            <p>
-                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc mollis eleifend dapibus.
-                                            </p>
-                                        </div>
-                                        <span class='offer-price'>$15</span>
-                                    </div>
-                                </div>
-                                <!-- end col -->
-                                <div class='col-lg-6 col-md-6 col-sm-12 col-xs-12 '>
-                                    <div class='offer-item'>
-                                        <img src='images/menu-item-thumbnail-06.jpg' alt='' class='img-responsive'>
-                                        <div>
-                                            <h3>SPICY MEATBALLS</h3>
-                                            <p>
-                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc mollis eleifend dapibus.
-                                            </p>
-                                        </div>
-                                        <span class='offer-price'>$6.5</span>
-                                    </div>
-                                </div>
-                                <!-- end col -->
-                            </div>
-                            <div>
-                                <div class='col-lg-6 col-md-6 col-sm-12 col-xs-12 '>
-                                    <div class='offer-item'>
-                                        <img src='images/menu-item-thumbnail-07.jpg' alt='' class='img-responsive'>
-                                        <div>
-                                            <h3>CHOCOLATE FUDGECAKE</h3>
-                                            <p>
-                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc mollis eleifend dapibus.
-                                            </p>
-                                        </div>
-                                        <span class='offer-price'>$4.5</span>
-                                    </div>
-                                </div>
-                                <!-- end col -->
-                                <div class='col-lg-6 col-md-6 col-sm-12 col-xs-12 '>
-                                    <div class='offer-item'>
-                                        <img src='images/menu-item-thumbnail-08.jpg' alt='' class='img-responsive'>
-                                        <div>
-                                            <h3>CHICKEN TIKKA MASALA</h3>
-                                            <p>
-                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc mollis eleifend dapibus.
-                                            </p>
-                                        </div>
-                                        <span class='offer-price'>$9.5</span>
-                                    </div>
-                                </div>
-                                <!-- end col -->
-                                <div class='col-lg-6 col-md-6 col-sm-12 col-xs-12 '>
-                                    <div class='offer-item'>
-                                        <img src='images/menu-item-thumbnail-09.jpg' alt='' class='img-responsive'>
-                                        <div>
-                                            <h3>CHICKEN TIKKA MASALA</h3>
-                                            <p>
-                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc mollis eleifend dapibus.
-                                            </p>
-                                        </div>
-                                        <span class='offer-price'>$10</span>
-                                    </div>
-                                </div>
-                                <!-- end col -->
-                            </div>
-                            <div>
-                                <div class='col-lg-6 col-md-6 col-sm-12 col-xs-12 '>
-                                    <div class='offer-item'>
-                                        <img src='images/menu-item-thumbnail-10.jpg' alt='' class='img-responsive'>
-                                        <div>
-                                            <h3>MEAT FEAST PIZZA</h3>
-                                            <p>
-                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc mollis eleifend dapibus.
-                                            </p>
-                                        </div>
-                                        <span class='offer-price'>$12.5</span>
-                                    </div>
-                                </div>
-                                <!-- end col -->
-                                <div class='col-lg-6 col-md-6 col-sm-12 col-xs-12 '>
-                                    <div class='offer-item'>
-                                        <img src='images/menu-item-thumbnail-09.jpg' alt='' class='img-responsive'>
-                                        <div>
-                                            <h3>CHICKEN TIKKA MASALA</h3>
-                                            <p>
-                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc mollis eleifend dapibus.
-                                            </p>
-                                        </div>
-                                        <span class='offer-price'>$9.5</span>
-                                    </div>
-                                </div>
-                                <!-- end col -->
-                                <div class='col-lg-6 col-md-6 col-sm-12 col-xs-12 '>
-                                    <div class='offer-item'>
-                                        <img src='images/menu-item-thumbnail-08.jpg' alt='' class='img-responsive'>
-                                        <div>
-                                            <h3>CHICKEN TIKKA MASALA</h3>
-                                            <p>
-                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc mollis eleifend dapibus.
-                                            </p>
-                                        </div>
-                                        <span class='offer-price'>$5.5</span>
-                                    </div>
-                                </div>
-                                <!-- end col -->
-                            </div>
-                        </div>
-                    </div>
-                    <!-- end tab-menu -->
-                </div>
-                <!-- end col -->
-            </div>
-            <!-- end row -->
-        </div>
-        <!-- end container -->
-    </div>
-    <!-- end menu -->";?>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+echo"<h2 id='text'>PLATS PRINCIPAUX</h2>";
+
+$get_menu ="SELECT * FROM menu WHERE cat='Plats' ORDER BY 1";
+$run_menu = mysqli_query($con, $get_menu);
+//$menu=0;
+while($row = mysqli_fetch_array($run_menu)){
+	//$menu++;
+	$title = $row['food_title'];
+	$discription = $row['food_description'];
+	$cat = $row['cat'];
+	$img = $row['food_img'];
+	$prix = $row['food_price'];
+	echo" <div class='appetizers row' ng-repeat='appetizer in appetizers'>
+	<div class='item col-md-9'>
+	  <h3 class='name'>$title</h3>
+	  <p class='description'>$discription</p>
+	</div>
+	<div class='price col-md-3'>
+	  <p class='price'>$prix</p>
+	</div>
+  </div>";}	  
+
+		 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+echo"<h2 id='text'>DESERTS</h2>";
+
+$get_menu ="SELECT * FROM menu WHERE cat='Deserts' ORDER BY 1";
+$run_menu = mysqli_query($con, $get_menu);
+//$menu=0;
+while($row = mysqli_fetch_array($run_menu)){
+	//$menu++;
+	$title = $row['food_title'];
+	$discription = $row['food_description'];
+	$cat = $row['cat'];
+	$img = $row['food_img'];
+	$prix = $row['food_price'];
+	echo" <div class='appetizers row' ng-repeat='appetizer in appetizers'>
+	<div class='item col-md-9'>
+	  <h3 class='name'>$title</h3>
+	  <p class='description'>$discription</p>
+	</div>
+	<div class='price col-md-3'>
+	  <p class='price'>$prix</p>
+	</div>
+  </div>";}	  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  echo"<h2 id='text'>BOISSON</h2>";
+
+$get_menu ="SELECT * FROM menu WHERE cat='Boissons' ORDER BY 1";
+$run_menu = mysqli_query($con, $get_menu);
+//$menu=0;
+while($row = mysqli_fetch_array($run_menu)){
+	//$menu++;
+	$title = $row['food_title'];
+	$discription = $row['food_description'];
+	$cat = $row['cat'];
+	$img = $row['food_img'];
+	$prix = $row['food_price'];
+	echo" <div class='appetizers row' ng-repeat='appetizer in appetizers'>
+	<div class='item col-md-9'>
+	  <h3 class='name'>$title</h3>
+	  <p class='description'>$discription</p>
+	</div>
+	<div class='price col-md-3'>
+	  <p class='price'>$prix</p>
+	</div>
+  </div>";}	  
+
+
+
+
+
+
+
+
+echo"</div>";
+echo"</div>";
+echo"</div>";
+?>
+
+
+

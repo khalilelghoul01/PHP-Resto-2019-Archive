@@ -11,7 +11,7 @@ include("includes/connection.php"); ?>
         <label class='sr-only'>Catégorie</label>
         <select class="browser-default custom-select" name="catigo">
         <option selected disabled>Catégorie</option>
-        <option value="Entrées">Entrées</option>
+        <option value="1">Entrées</option>
         <option value="Plats">Plats Principaux</option>
         <option value="Deserts">Deserts</option>
         <option value="Boissons">Boissons</option>

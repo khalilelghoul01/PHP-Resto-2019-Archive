@@ -197,7 +197,7 @@ $mail->isHTML();
 $mail->Username = 'lezoomail@gmail.com';
 $mail->Password = 'ht1234567890';
 $mail->setFrom('lezoomail@gmail.com', 'Le ZOO');
-$mail->Subject = 'Confirmer votre email';
+$mail->Subject = 'Confirmer votre email > il faut attendre la confirmation';
 
 if(isset($_POST['send'])){
     $full_name = htmlentities(mysqli_real_escape_string($con,$_POST['form_name']));
@@ -435,7 +435,9 @@ if(isset($_POST['send'])){
     $query="INSERT INTO reservation(full_name, email, phone, num_person, date, time, pref_food, occasion, status, auth_link, save_date) VALUES ('$full_name','$email','$phone','$num_person','$date','$time','$pref_food','$occasion','NO','$link',NOW())";
     if(mysqli_query($con,$query)){
 		$mail->Send();
-		//echo "<script>window.open('../index.php', '_self')</script>";
+		echo "<script>alert('vérifier votre email')</script>";
+		echo "<script>window.open('../index.php', '_self')</script>";
+		exit();
     }
 }
 

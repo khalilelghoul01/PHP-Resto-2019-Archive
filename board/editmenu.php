@@ -9,9 +9,13 @@
     $run_menu = mysqli_query($con, $get_menu);
     while($row = mysqli_fetch_array($run_menu)){
         $title_n = $row['food_title'];
-        //$catig = $row['cat'];
+        $catig = $row['cat'];
         $descri = $row['food_description'];
-        //$price = $row['food_price'];
+        $price = $row['food_price'];
+        $price = str_replace("€","",$price);
+        //$price = str_replace(".",",",$price);
+        //echo $catig;
+        $price_int = strval($price);
         //$role = $row['role_user'];
         echo "<form method='post' action='' enctype='multipart/form-data'>
         <div style='width:50%;text-align: center;margin: 0 auto;'>
@@ -20,17 +24,43 @@
             <label class='sr-only'>Titre</label>
             <input type='text' name='titre'class='form-control' placeholder='Titre' value='$title_n'><br>
             <label class='sr-only'>Catégorie</label>
-            <select class='browser-default custom-select' name='catigo' >
-            <option selected disabled>Catégorie</option>
-            <option value='Entrées'>Entrées</option>
+            <select class='browser-default custom-select' name='catigo' >";
+        if($catig == "1"){
+            echo"<option disabled>Catégorie</option>
+            <option selected value='1'>Entrées</option>
             <option value='Plats'>Plats Principaux</option>
             <option value='Deserts'>Deserts</option>
-            <option value='Boissons'>Boissons</option>
-            </select><br><br>
+            <option value='Boissons'>Boissons</option>";}
+        if($catig == "Plats"){
+                echo"<option disabled>Catégorie</option>
+                <option value='1'>Entrées</option>
+                <option selected value='Plats'>Plats Principaux</option>
+                <option value='Deserts'>Deserts</option>
+                <option value='Boissons'>Boissons</option>";}
+        if($catig == "Deserts"){
+                    echo"<option disabled>Catégorie</option>
+                    <option value='1'>Entrées</option>
+                    <option value='Plats'>Plats Principaux</option>
+                    <option selected value='Deserts'>Deserts</option>
+                    <option value='Boissons'>Boissons</option>";}
+        if($catig == "Boissons"){
+            echo"<option disabled>Catégorie</option>
+            <option value='1'>Entrées</option>
+            <option value='Plats'>Plats Principaux</option>
+            <option value='Deserts'>Deserts</option>
+            <option selected value='Boissons'>Boissons</option>";}
+        if($catig == ""){
+            echo"<option selected disabled>Catégorie</option>
+            <option value='1'>Entrées</option>
+            <option value='Plats'>Plats Principaux</option>
+            <option value='Deserts'>Deserts</option>
+            <option value='Boissons'>Boissons</option>";
+        }
+            echo"</select><br><br>
             <label class='sr-only'>Discription</label>
             <input type='text' name='discription' class='form-control' placeholder='Discription' value='$descri' ><br>
             <label class='sr-only'>Le Prix</label>
-            <input type='number' name='prix'class='form-control' placeholder='Le Prix'><br>
+            <input type='number' name='prix'class='form-control' placeholder='Le Prix' value='$price_int' step='0.01'><br>
             <div class='input-group'>
       <div class='input-group-prepend'>
         <span class='input-group-text' id='inputGroupFileAddon01'>fichier</span>
