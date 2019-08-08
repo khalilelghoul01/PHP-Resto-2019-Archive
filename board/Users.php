@@ -15,11 +15,8 @@
 		<script src="main.js"></script>
 	</head>
 <body>
+<body>
 	<?php include("includes/header.php") ?>
-	<div class="main-content">
-			<div class="title">
-				Users
-			</div>
-	</div>
+</body>
 </body>
 </html>

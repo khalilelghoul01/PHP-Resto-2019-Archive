@@ -1,3 +1,5 @@
+ <?php include("visitor.php");?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -71,7 +73,7 @@
                                     <li><a href="#our_team">Équipe</a></li>
                                     <li><a href="#gallery">Galerie</a></li>
                                     <li><a href="#blog">Nos nouvelles</a></li>
-                                    <li><a href="#reservation">Réservation</a></li>
+                                    <li><a href="reservation.php">Réservation</a></li>
                                     <li><a href="#footer">Contactez nous</a></li>
                                 </ul>
                             </div>
@@ -98,7 +100,7 @@
                             <h2>la nourriture est l'ingrédient qui nous unit </h2>
                             <p>La bonne nourriture égale La bonne humeur</p>
                             <div class="book-btn">
-                                <a href="#reservation" class="table-btn hvr-underline-from-center">Réserver une table</a>
+                                <a href="reservation.php" class="table-btn hvr-underline-from-center">Réserver une table</a>
                             </div>
                             <a href="#about">
                                 <div class="mouse"></div>
@@ -143,305 +145,7 @@
         </div>
         <!-- end container -->
     </div>
-
-    <div class="special-menu pad-top-100 parallax">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                    <div class="wow fadeIn" data-wow-duration="1s" data-wow-delay="0.1s">
-                        <h2 class="block-title color-white text-center"> Le plat du jour </h2>
-                        <h5 class="title-caption text-center"> Vous avez plusieurs choix, entre les pizzas, les salades, les plats et les pates.  </h5>
-                    </div>
-                    <div class="special-box">
-                        <div id="owl-demo">
-                            <div class="item item-type-zoom">
-                                <a href="#" class="item-hover">
-                                    <div class="item-info">
-                                        <div class="headline">
-                                            SALMON STEAK
-                                            <div class="line"></div>
-                                            <div class="dit-line">Lorem ipsum dolor sit amet, consectetur adip aliqua. Ut enim ad minim venia.</div>
-                                        </div>
-                                    </div>
-                                </a>
-                                <div class="item-img">
-                                    <img src="images/special-menu-1.jpg" alt="sp-menu">
-                                </div>
-                            </div>
-                            <div class="item item-type-zoom">
-                                <a href="#" class="item-hover">
-                                    <div class="item-info">
-                                        <div class="headline">
-                                            ITALIAN PIZZA
-                                            <div class="line"></div>
-                                            <div class="dit-line">Lorem ipsum dolor sit amet, consectetur adip aliqua. Ut enim ad minim venia.</div>
-                                        </div>
-                                    </div>
-                                </a>
-                                <div class="item-img">
-                                    <img src="images/special-menu-2.jpg" alt="sp-menu">
-                                </div>
-                            </div>
-                            <div class="item item-type-zoom">
-                                <a href="#" class="item-hover">
-                                    <div class="item-info">
-                                        <div class="headline">
-                                            VEG. ROLL
-                                            <div class="line"></div>
-                                            <div class="dit-line">Lorem ipsum dolor sit amet, consectetur adip aliqua. Ut enim ad minim venia.</div>
-                                        </div>
-                                    </div>
-                                </a>
-                                <div class="item-img">
-                                    <img src="images/special-menu-3.jpg" alt="sp-menu">
-                                </div>
-                            </div>
-                            <div class="item item-type-zoom">
-                                <a href="#" class="item-hover">
-                                    <div class="item-info">
-                                        <div class="headline">
-                                            SALMON STEAK
-                                            <div class="line"></div>
-                                            <div class="dit-line">Lorem ipsum dolor sit amet, consectetur adip aliqua. Ut enim ad minim venia.</div>
-                                        </div>
-                                    </div>
-                                </a>
-                                <div class="item-img">
-                                    <img src="images/special-menu-1.jpg" alt="sp-menu">
-                                </div>
-                            </div>
-                            <div class="item item-type-zoom">
-                                <a href="#" class="item-hover">
-                                    <div class="item-info">
-                                        <div class="headline">
-                                            VEG. ROLL
-                                            <div class="line"></div>
-                                            <div class="dit-line">Lorem ipsum dolor sit amet, consectetur adip aliqua. Ut enim ad minim venia.</div>
-                                        </div>
-                                    </div>
-                                </a>
-                                <div class="item-img">
-                                    <img src="images/special-menu-2.jpg" alt="sp-menu">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- end special-box -->
-                </div>
-                <!-- end col -->
-            </div>
-            <!-- end row -->
-        </div>
-        <!-- end container -->
-    </div>
-    <!-- end special-menu -->
-
-    <div id="menu" class="menu-main pad-top-100 pad-bottom-100">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                    <div class="wow fadeIn" data-wow-duration="1s" data-wow-delay="0.1s">
-                        <h2 class="block-title text-center">
-						Notre Menu	
-					</h2>
-        <br><br>
-                    </div>
-                    <div class="tab-menu">
-                        <div class="slider slider-nav">
-                            <div class="tab-title-menu">
-                                <h2>ENTRÉES</h2>
-                                <p> <i class="flaticon-canape"></i> </p>
-                            </div>
-                            <div class="tab-title-menu">
-                                <h2>PLATS PRINCIPAUX</h2>
-                                <p> <i class="flaticon-dinner"></i> </p>
-                            </div>
-                            <div class="tab-title-menu">
-                                <h2>DESERTS</h2>
-                                <p> <i class="flaticon-desert"></i> </p>
-                            </div>
-                            <div class="tab-title-menu">
-                                <h2>BOISSONS</h2>
-                                <p> <i class="flaticon-coffee"></i> </p>
-                            </div>
-                        </div>
-                        <div class="slider slider-single">
-                            <div>
-                                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 ">
-                                    <div class="offer-item">
-                                        <img src="images/menu-item-thumbnail-01.jpg" alt="" class="img-responsive">
-                                        <div>
-                                            <h3>GARLIC BREAD</h3>
-                                            <p>
-                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc mollis eleifend dapibus.
-                                            </p>
-                                        </div>
-                                        <span class="offer-price">$8.5</span>
-                                    </div>
-                                </div>
-                                <!-- end col -->
-                                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 ">
-                                    <div class="offer-item">
-                                        <img src="images/menu-item-thumbnail-02.jpg" alt="" class="img-responsive">
-                                        <div>
-                                            <h3>MIXED SALAD</h3>
-                                            <p>
-                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc mollis eleifend dapibus.
-                                            </p>
-                                        </div>
-                                        <span class="offer-price">$25</span>
-                                    </div>
-                                </div>
-                                <!-- end col -->
-                                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 ">
-                                    <div class="offer-item">
-                                        <img src="images/menu-item-thumbnail-03.jpg" alt="" class="img-responsive">
-                                        <div>
-                                            <h3>BBQ CHICKEN WINGS</h3>
-                                            <p>
-                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc mollis eleifend dapibus.
-                                            </p>
-                                        </div>
-                                        <span class="offer-price">$10</span>
-                                    </div>
-                                </div>
-                                <!-- end col -->
-                            </div>
-                            <div>
-                                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 ">
-                                    <div class="offer-item">
-                                        <img src="images/menu-item-thumbnail-04.jpg" alt="" class="img-responsive">
-                                        <div>
-                                            <h3>MEAT FEAST PIZZA</h3>
-                                            <p>
-                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc mollis eleifend dapibus.
-                                            </p>
-                                        </div>
-                                        <span class="offer-price">$5</span>
-                                    </div>
-                                </div>
-                                <!-- end col -->
-                                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 ">
-                                    <div class="offer-item">
-                                        <img src="images/menu-item-thumbnail-05.jpg" alt="" class="img-responsive">
-                                        <div>
-                                            <h3>CHICKEN TIKKA MASALA</h3>
-                                            <p>
-                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc mollis eleifend dapibus.
-                                            </p>
-                                        </div>
-                                        <span class="offer-price">$15</span>
-                                    </div>
-                                </div>
-                                <!-- end col -->
-                                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 ">
-                                    <div class="offer-item">
-                                        <img src="images/menu-item-thumbnail-06.jpg" alt="" class="img-responsive">
-                                        <div>
-                                            <h3>SPICY MEATBALLS</h3>
-                                            <p>
-                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc mollis eleifend dapibus.
-                                            </p>
-                                        </div>
-                                        <span class="offer-price">$6.5</span>
-                                    </div>
-                                </div>
-                                <!-- end col -->
-                            </div>
-                            <div>
-                                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 ">
-                                    <div class="offer-item">
-                                        <img src="images/menu-item-thumbnail-07.jpg" alt="" class="img-responsive">
-                                        <div>
-                                            <h3>CHOCOLATE FUDGECAKE</h3>
-                                            <p>
-                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc mollis eleifend dapibus.
-                                            </p>
-                                        </div>
-                                        <span class="offer-price">$4.5</span>
-                                    </div>
-                                </div>
-                                <!-- end col -->
-                                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 ">
-                                    <div class="offer-item">
-                                        <img src="images/menu-item-thumbnail-08.jpg" alt="" class="img-responsive">
-                                        <div>
-                                            <h3>CHICKEN TIKKA MASALA</h3>
-                                            <p>
-                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc mollis eleifend dapibus.
-                                            </p>
-                                        </div>
-                                        <span class="offer-price">$9.5</span>
-                                    </div>
-                                </div>
-                                <!-- end col -->
-                                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 ">
-                                    <div class="offer-item">
-                                        <img src="images/menu-item-thumbnail-09.jpg" alt="" class="img-responsive">
-                                        <div>
-                                            <h3>CHICKEN TIKKA MASALA</h3>
-                                            <p>
-                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc mollis eleifend dapibus.
-                                            </p>
-                                        </div>
-                                        <span class="offer-price">$10</span>
-                                    </div>
-                                </div>
-                                <!-- end col -->
-                            </div>
-                            <div>
-                                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 ">
-                                    <div class="offer-item">
-                                        <img src="images/menu-item-thumbnail-10.jpg" alt="" class="img-responsive">
-                                        <div>
-                                            <h3>MEAT FEAST PIZZA</h3>
-                                            <p>
-                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc mollis eleifend dapibus.
-                                            </p>
-                                        </div>
-                                        <span class="offer-price">$12.5</span>
-                                    </div>
-                                </div>
-                                <!-- end col -->
-                                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 ">
-                                    <div class="offer-item">
-                                        <img src="images/menu-item-thumbnail-09.jpg" alt="" class="img-responsive">
-                                        <div>
-                                            <h3>CHICKEN TIKKA MASALA</h3>
-                                            <p>
-                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc mollis eleifend dapibus.
-                                            </p>
-                                        </div>
-                                        <span class="offer-price">$9.5</span>
-                                    </div>
-                                </div>
-                                <!-- end col -->
-                                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 ">
-                                    <div class="offer-item">
-                                        <img src="images/menu-item-thumbnail-08.jpg" alt="" class="img-responsive">
-                                        <div>
-                                            <h3>CHICKEN TIKKA MASALA</h3>
-                                            <p>
-                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc mollis eleifend dapibus.
-                                            </p>
-                                        </div>
-                                        <span class="offer-price">$5.5</span>
-                                    </div>
-                                </div>
-                                <!-- end col -->
-                            </div>
-                        </div>
-                    </div>
-                    <!-- end tab-menu -->
-                </div>
-                <!-- end col -->
-            </div>
-            <!-- end row -->
-        </div>
-        <!-- end container -->
-    </div>
-    <!-- end menu -->
-
+<?php include("menu.php");?>
     <div id="our_team" class="team-main pad-top-100 pad-bottom-100 parallax">
         <div class="container">
             <div class="row">
@@ -458,7 +162,7 @@
                             <div class="col-md-4 col-sm-6">
                                 <div class="sf-team">
                                     <div class="thumb">
-                                        <a href="#"><img src="images/staff-01.jpg" alt=""></a>
+                                        <a href="#"><img src="https://scontent-cdt1-1.xx.fbcdn.net/v/t1.0-9/23319541_479597542421428_6203773304692359899_n.jpg?_nc_cat=106&_nc_oc=AQk-xaBmMjGbaCs-AoR_aFxRoj1OAYq-4Ty9WJs-oY47nT6cUW7QyYxytlsPTephNU86YdLWHoCYxod0U_pJbptP&_nc_ht=scontent-cdt1-1.xx&oh=de7be6b8b222bbae1d3aa1cd30c28f28&oe=5DE423B0" alt=""></a>
                                     </div>
                                     <div class="text-col">
                                         <h3>El Ghoul Khalil</h3>
@@ -474,7 +178,7 @@
                             <div class="col-md-4 col-sm-6">
                                 <div class="sf-team">
                                     <div class="thumb">
-                                        <a href="#"><img src="images/staff-03.jpg" alt=""></a>
+                                        <a href="#"><img src="https://scontent-cdt1-1.xx.fbcdn.net/v/t1.0-9/28783044_10211499615306267_4327572145090592768_n.jpg?_nc_cat=105&_nc_oc=AQlvILtY68kwIJ4N1Nf_11zD7d9UumnMIPqxqoHRMb1-IdmtvSuKLAL0gylKv_LyCXA7Le0k_77qgmeUx45cO1nj&_nc_ht=scontent-cdt1-1.xx&oh=7a568c0aed719b927b1318b4c847dd86&oe=5DDD03AB" alt=""></a>
                                     </div>
                                     <div class="text-col">
                                         <h3>Jlidi Olfa</h3>
@@ -491,7 +195,7 @@
                             <div class="col-md-4 col-sm-6">
                                 <div class="sf-team">
                                     <div class="thumb">
-                                        <a href="#"><img src="images/staff-02.jpg" alt=""></a>
+                                        <a href="#"><img src="https://scontent-cdt1-1.xx.fbcdn.net/v/t1.0-9/28783044_10211499615306267_4327572145090592768_n.jpg?_nc_cat=105&_nc_oc=AQlvILtY68kwIJ4N1Nf_11zD7d9UumnMIPqxqoHRMb1-IdmtvSuKLAL0gylKv_LyCXA7Le0k_77qgmeUx45cO1nj&_nc_ht=scontent-cdt1-1.xx&oh=7a568c0aed719b927b1318b4c847dd86&oe=5DDD03AB" alt=""></a>
                                     </div>
                                     <div class="text-col">
                                         <h3>Mguedmini Afif</h3>
@@ -837,107 +541,6 @@
         <!-- end container -->
     </div>
     <!-- end blog-main -->
-
-    
-    <div id="reservation" class="reservations-main pad-top-100 pad-bottom-100">
-        <div class="container">
-            <div class="row">
-                <div class="form-reservations-box">
-                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                        <div class="wow fadeIn" data-wow-duration="1s" data-wow-delay="0.1s">
-                            <h2 class="block-title text-center">
-                        Reservations			
-					</h2>
-                        </div>
-                        <h4 class="form-title">FORMULAIRE DE RESERVATION</h4>
-                        <p>S'IL-VOUS-PLAÎT REMPLISSEZ TOUS LES CHAMPS REQUIS. MERCI!</p>
-
-                        <form id="contact-form" method="post" class="reservations-box" name="contactform" action="mail.php">
-                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                                <div class="form-box">
-                                    <input type="text" name="form_name" id="form_name" placeholder="Nom complet" required="required" data-error="Firstname is required.">
-                                </div>
-                            </div>
-                            <!-- end col -->
-                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                                <div class="form-box">
-                                    <input type="email" name="email" id="email" placeholder="E-Mail ID" required="required" data-error="E-mail id is required.">
-                                </div>
-                            </div>
-                            <!-- end col -->
-                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                                <div class="form-box">
-                                    <input type="text" name="phone" id="phone" placeholder="Numero contact">
-                                </div>
-                            </div>
-                            <!-- end col -->
-                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                                <div class="form-box">
-                                    <select name="no_of_persons" id="no_of_persons" class="selectpicker">
-                                        <option selected disabled>No. de personnes</option>
-                                        <option>1</option>
-                                        <option>2</option>
-                                        <option>3</option>
-                                        <option>4</option>
-                                        <option>5</option>
-                                    </select>
-                                </div>
-                            </div>
-                            <!-- end col -->
-                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                                <div class="form-box">
-                                    <input type="text" name="date-picker" id="date-picker" placeholder="Date" required="required" data-error="Date is required." />
-                                </div>
-                            </div>
-                            <!-- end col -->
-                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                                <div class="form-box">
-                                    <input type="text" name="time-picker" id="time-picker" placeholder="L'heure" required="required" data-error="Time is required." />
-                                </div>
-                            </div>
-                            <!-- end col -->
-                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                                <div class="form-box">
-                                    <select name="preferred_food" id="preferred_food" class="selectpicker">
-                                        <option selected disabled>choix préférée</option>
-                                        <option>Pizza</option>
-                                        <option>Salade</option>
-                                        <option>Pate</option>
-                                    </select>
-                                </div>
-                            </div>
-                            <!-- end col -->
-                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                                <div class="form-box">
-                                    <select name="occasion" id="occasion" class="selectpicker">
-                                        <option selected disabled>Occasion</option>
-                                        <option>Mariage</option>
-                                        <option>Anniversaire</option>
-                                        <option>Evénement</option>
-                                    </select>
-                                </div>
-                            </div>
-                            <!-- end col -->
-
-                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                <div class="reserve-book-btn text-center">
-                                    <button class="hvr-underline-from-center" type="submit" value="SEND" id="submit">Enregistrer </button>
-                                </div>
-                            </div>
-                            <!-- end col -->
-                        </form>
-                        <!-- end form -->
-                    </div>
-                    <!-- end col -->
-                </div>
-                <!-- end reservations-box -->
-            </div>
-            <!-- end row -->
-        </div>
-        <!-- end container -->
-    </div>
-    <!-- end reservations-main -->
-
     <div id="footer" class="footer-main">
         <div class="footer-news pad-top-100 pad-bottom-70 parallax">
             <div class="container">
